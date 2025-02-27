@@ -139,14 +139,14 @@ var privateDnsZoneNames = [
 param openAiInstances object = {
   openAi1: {
     name: 'openai1'
-    location: 'eastus'
+    location: 'canadaeast'
     deployments: [
       {
         name: 'chat'
         model: {
           format: 'OpenAI'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
+          name: 'gpt-4'
+          version: '0613'
         }
         sku: {
           name: 'Standard'
@@ -182,14 +182,14 @@ param openAiInstances object = {
   }
   openAi2: {
     name: 'openai2'
-    location: 'northcentralus'
+    location: 'canadaeast'
     deployments: [
       {
         name: 'chat'
         model: {
           format: 'OpenAI'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
+          name: 'gpt-4'
+          version: '0613'
         }
         sku: {
           name: 'Standard'
@@ -201,14 +201,14 @@ param openAiInstances object = {
   }
   openAi3: {
     name: 'openai3'
-    location: 'eastus2'
+    location: 'canadaeast'
     deployments: [
       {
         name: 'chat'
         model: {
           format: 'OpenAI'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
+          name: 'gpt-4'
+          version: '0613'
         }
         sku: {
           name: 'Standard'
@@ -256,7 +256,7 @@ param openAiSkuName string = 'S0'
 param deploymentCapacity int = 20
 
 @description('Tags to be applied to resources.')
-param tags object = { 'azd-env-name': environmentName }
+param tags object = { 'azd-env-name': environmentName , SolutionName: 'AI-Hub-Dev'}
 
 @description('Should Entra ID validation be enabled')
 param entraAuth bool = false
